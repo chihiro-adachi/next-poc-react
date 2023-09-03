@@ -71,6 +71,7 @@ jobs:
           #git clone -b next-poc https://github.com/EC-CUBE/eccube-api4.git
           git clone -b dev/next/entity-scope https://github.com/kiy0taka/eccube-api4.git
           sed -i 's/"extra": {/"extra": { "id": 123,/g' eccube-api4/composer.json
+          composer update symfony/proxy-manager-bridge
           bin/console eccube:composer:require ec-cube/api42 --from=./eccube-api4
           bin/console eccube:plugin:enable --code Api42
           bin/console doctrine:schema:update --dump-sql -f # プラグイン有効化時に何故かoauth2のテーブルが生成されないので
