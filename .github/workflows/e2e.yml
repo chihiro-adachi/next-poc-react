@@ -54,7 +54,7 @@ jobs:
         run: |
           git clone https://github.com/EC-CUBE/next-poc.git ec-cube
           cd ec-cube
-          sed -i 's/"php": "^7.4 || ^8.0",/"php": "^8.0",/g' composer.json
+          sed -i 's/"php": "^7.4 || ^8.0",/"php": "^8.1",/g' composer.json
           composer install
           echo "APP_ENV=prod
             APP_DEBUG=0
