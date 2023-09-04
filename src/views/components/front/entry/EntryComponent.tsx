@@ -53,7 +53,7 @@ const EntryComponent = (
                         <Grid container>
                             <Grid item xs={6}>
                                 <Field
-                                    name="name01"
+                                    name="name_name01"
                                     fullWidth
                                     required
                                     size={"small"}
@@ -65,7 +65,7 @@ const EntryComponent = (
                             </Grid>
                             <Grid item xs={6}>
                                 <Field
-                                    name="name02"
+                                    name="name_name02"
                                     fullWidth
                                     required
                                     size={"small"}
@@ -79,7 +79,7 @@ const EntryComponent = (
                         <Grid container>
                             <Grid item xs={6}>
                                 <Field
-                                    name="kana01"
+                                    name="kana_kana01"
                                     fullWidth
                                     required
                                     size={"small"}
@@ -91,7 +91,7 @@ const EntryComponent = (
                             </Grid>
                             <Grid item xs={6}>
                                 <Field
-                                    name="kana02"
+                                    name="kana_kana02"
                                     fullWidth
                                     required
                                     size={"small"}
@@ -105,7 +105,7 @@ const EntryComponent = (
                         <Grid container>
                             <Grid item xs={12}>
                                 <Field
-                                    name="pref"
+                                    name="address_pref"
                                     fullWidth
                                     required
                                     size={"small"}
@@ -133,7 +133,7 @@ const EntryComponent = (
                         <Grid container>
                             <Grid item xs={12}>
                                 <Field
-                                    name="addr01"
+                                    name="address_addr01"
                                     fullWidth
                                     required
                                     size={"small"}
@@ -147,7 +147,7 @@ const EntryComponent = (
                         <Grid container>
                             <Grid item xs={12}>
                                 <Field
-                                    name="addr02"
+                                    name="address_addr02"
                                     fullWidth
                                     required
                                     size={"small"}
