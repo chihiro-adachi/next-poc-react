@@ -16,12 +16,13 @@ on:
     inputs:
       eccube-api-repository:
         description: 'EC-CUBE API REPOSITORY'
-        default: 'https://github.com/EC-CUBE/eccube-api4.git'
         required: false
       eccube-api-branch:
         description: 'EC-CUBE API BRANCH'
-        default: 'next-poc'
         required: false
+env:
+  API_REPOSITORY: ${{ inputs.eccube-api-repository || 'https://github.com/EC-CUBE/eccube-api4.git' }}
+  API_BRANCH: ${{ inputs.eccube-api-branch || 'next-poc' }}
 
 jobs:
   e2e:
@@ -78,9 +79,6 @@ jobs:
 
       - name: Setup EC-CUBE API Plugin
         working-directory: ec-cube
-        env:
-          REPOSITORY: ${{ inputs.eccube-api-repository }}
-          BRANCH: ${{ inputs.eccube-api-branch }}
         run: |
           git clone -b ${BRANCH} ${REPOSITORY}
           sed -i 's/"extra": {/"extra": { "id": 123,/g' eccube-api4/composer.json
