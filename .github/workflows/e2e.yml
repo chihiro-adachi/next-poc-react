@@ -16,9 +16,11 @@ on:
     inputs:
       eccube-api-repository:
         description: 'EC-CUBE API REPOSITORY'
+        default: 'https://github.com/EC-CUBE/eccube-api4.git'
         required: false
       eccube-api-branch:
         description: 'EC-CUBE API BRANCH'
+        default: 'next-poc'
         required: false
 env:
   API_REPOSITORY: ${{ inputs.eccube-api-repository || 'https://github.com/EC-CUBE/eccube-api4.git' }}
